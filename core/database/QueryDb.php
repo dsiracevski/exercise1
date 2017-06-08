@@ -12,7 +12,7 @@ class QueryBuilder
 
     public function selectAll($table)
     {
-        $statement = $this->pdo->prepare("select * from {$table}");
+        $statement = $this->pdo->prepare("select * from {$table} where user_name='blabla' and password = 'lozinka'");
 
         $statement->execute();
 
